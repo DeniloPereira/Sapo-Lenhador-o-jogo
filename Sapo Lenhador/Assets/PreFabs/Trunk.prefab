@@ -166,14 +166,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62d18a2af6a24547abebeeae91f8198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootSpeed: 700
-  timeBtwShots: 1
+  shootSpeed: 0.4
+  timeBtwShots: 2
   canShoot: 1
+  direction: -1
+  alive: 0
   bullet: {fileID: 4179279966081552567, guid: dd74fd3c938bdd447aa0113cb7b66278, type: 3}
   anim: {fileID: 3941039713130394207}
+  tran: {fileID: 3941039713130394203}
   shootPos: {fileID: 3941039714519490571}
   shootRange: {fileID: 3941039714849333858}
   player: {fileID: 0}
+  boxCol: {fileID: 3941039713130394205}
+  rig: {fileID: 3941039713130394206}
 --- !u!1 &3941039714519490572
 GameObject:
   m_ObjectHideFlags: 0

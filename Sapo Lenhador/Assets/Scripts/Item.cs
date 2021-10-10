@@ -7,7 +7,7 @@ public class Item : MonoBehaviour
     private SpriteRenderer sRen;
     private CircleCollider2D circ;
     GameManager gManager;
-    bool hasCaught = true;
+    bool hasCaught = true; //Variável que diz se a fruta já foi tocada (para evitar que contabilize mais de 1 ponto)
 
     public GameObject Collected;
 
@@ -18,6 +18,8 @@ public class Item : MonoBehaviour
         gManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
+    //Verifica se o jogador tocou na fruta para contabilizar 1 ponto
+    //no GameManager e destruir a fruta.
     void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.tag == "Player" && hasCaught)
