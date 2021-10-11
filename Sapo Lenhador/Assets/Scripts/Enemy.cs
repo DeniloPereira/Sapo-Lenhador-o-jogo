@@ -70,8 +70,9 @@ public class Enemy : MonoBehaviour
     //TIRO
     IEnumerator Shoot()
     {
-        //Ativa a animação de atirar.
+        //Ativa a animação de atirar e espera chegar no frame de disparo.
         anim.SetTrigger("shoot");
+        yield return new WaitForSeconds (0.25f);
 
         //Instancia o tiro.
         GameObject newBullet = Instantiate(bullet, shootPos.position, tran.rotation);
